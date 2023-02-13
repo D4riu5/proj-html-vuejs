@@ -20,24 +20,24 @@ export default {
 
 
 <template>
-<div class="container text-white py-5 d-flex justify-content-between position-absolute start-0 end-0">
-    <div class="py-2">
-        <AppLogo/>
+    <div class="container text-white py-5 d-flex justify-content-between position-absolute start-0 end-0 z-2">
+        <div class="py-2">
+            <AppLogo/>
+        </div>
+        <div class="d-flex align-items-center">
+            <a href="#nogo" v-for="link in store.headerLinks" class="p-2 mx-2">
+                {{ link.text.toUpperCase() }}
+            </a>
+        </div>
+        <div class="d-flex align-items-center">
+            <a v-for="icon in store.headerIcons" href="#nogo" class="p-2 mx-2  position-relative">
+                <i class="fa-solid" :class="icon.type"></i>
+                <div v-if="icon.hasOwnProperty('items') " class="item-counter d-flex position-absolute">
+                    {{ icon.items }}
+                </div>
+            </a>
+        </div>
     </div>
-    <div class="d-flex align-items-center">
-        <a href="#nogo" v-for="link in store.headerLinks" class="p-2 mx-2">
-            {{ link.text.toUpperCase() }}
-        </a>
-    </div>
-    <div class="d-flex align-items-center">
-        <a v-for="icon in store.headerIcons" href="#nogo" class="p-2 mx-2  position-relative">
-            <i class="fa-solid" :class="icon.type"></i>
-            <div v-if="icon.hasOwnProperty('items') " class="item-counter d-flex position-absolute">
-                {{ icon.items }}
-            </div>
-        </a>
-    </div>
-</div>
 </template>
 
 
@@ -67,7 +67,6 @@ export default {
             transform: scaleX(-1);
         }
     }
-
-
-    
 </style>
+
+
