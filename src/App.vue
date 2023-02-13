@@ -24,13 +24,16 @@ export default {
 
 
 <template>
-  <AppHeader/>
-  <AppMain/>
-  <AppFooter/>
+  <div class="container">
+    <AppHeader/>
+    <AppMain/>
+    <AppFooter/>
+  </div>
+
 </template>
 
 
 <style lang="scss">
-@use "./styles/main";
+  @use "./styles/main";
 
 </style>
