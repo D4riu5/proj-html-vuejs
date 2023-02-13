@@ -70,3 +70,4 @@ export default {
 </style>
 
 
+#f2f8fc
