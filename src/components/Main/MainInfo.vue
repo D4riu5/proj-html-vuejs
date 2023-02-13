@@ -19,7 +19,7 @@ export default {
 
 
 <template>
-    <div class="my_info-container p-5 bg-warning">
+    <div class="container my_info-container p-5 bg-warning">
         same as boolzapp
         <div>
             CONTACTS -------------------------> CONTACT PAGE

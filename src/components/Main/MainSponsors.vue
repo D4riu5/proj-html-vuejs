@@ -19,7 +19,7 @@ export default {
 
 
 <template>
-    <div class="p-5 my-3 d-flex justify-content-between">
+    <div class="container p-5 my-3 d-flex justify-content-between">
         <div class="bg-secondary p-5">
             <div>
                 IMAGE

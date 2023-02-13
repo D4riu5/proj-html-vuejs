@@ -20,22 +20,22 @@ export default {
 
 
 <template>
-<div class="text-white p-5 d-flex justify-content-between bg-secondary">
-    <div>
-        LOGO
+<div class="container text-white py-5 d-flex justify-content-between position-absolute start-0 end-0">
+    <div class="py-2">
+        <AppLogo/>
     </div>
-    <div>
-        <span class="px-3">TEXT</span>
-        <span class="px-3">TEXT</span>
-        <span class="px-3">TEXT</span>
-        <span class="px-3">TEXT</span>
-        <span class="px-3">TEXT</span>
-        <span class="px-3">TEXT</span>
+    <div class="d-flex align-items-center">
+        <a href="#nogo" v-for="link in store.headerLinks" class="p-2 mx-2">
+            {{ link.text.toUpperCase() }}
+        </a>
     </div>
-    <div>
-        <span class="px-3">icon</span>
-        <span class="px-3">icon</span>
-        <span class="px-3">icon</span>
+    <div class="d-flex align-items-center">
+        <a v-for="icon in store.headerIcons" href="#nogo" class="p-2 mx-2  position-relative">
+            <i class="fa-solid" :class="icon.type"></i>
+            <div v-if="icon.hasOwnProperty('items') " class="item-counter d-flex position-absolute">
+                {{ icon.items }}
+            </div>
+        </a>
     </div>
 </div>
 </template>
@@ -44,4 +44,30 @@ export default {
 <style lang="scss" scoped>
     @use "../styles/partials/variables.scss" as *;
 
+    a{
+        text-decoration: none;
+        color: $white;
+
+        &:hover{
+            color: $dirtyWhite;
+        }
+        .item-counter{
+            width: 15px;
+            aspect-ratio: 1/1;
+            border-radius: 50%;
+            background-color: $lightBlue;
+            justify-content: center;
+            align-items: center;
+            font-size: 10px;
+            top: 5px;
+            right: -2px;
+        }
+
+        .fa-magnifying-glass{
+            transform: scaleX(-1);
+        }
+    }
+
+
+    
 </style>

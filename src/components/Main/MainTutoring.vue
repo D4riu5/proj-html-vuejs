@@ -19,14 +19,14 @@ export default {
 
 
 <template>
-    <div class="my_tutoring-container bg-success p-5">
+    <div class="container my_tutoring-container bg-success p-5">
 
-    `    <h2>
+        <h2>
             The Trusted Name for In-Home Tutoring.
         </h2>
         <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, illum minus! Molestiae nemo et officiis ducimus voluptate ad veritatis debitis itaque, suscipit quasi ea deleniti corporis minus maxime, labore temporibus fuga saepe tenetur  vitae. Neque quos consequuntur eveniet quo obcaecati! Omnis perferendis repudiandae nostrum necessitatibus?
-        </p>`
+        </p>
 
         <div class="debug-height1">
             IMAGE
