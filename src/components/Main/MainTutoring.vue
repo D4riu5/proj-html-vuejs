@@ -1,13 +1,14 @@
 <script>
+import { store } from "../store.js";
 
 export default {
-    name: 'Placeholder',
+    name: 'MainTutoring',
     components: {
 
     },
     data() {
         return {
-            
+            store
         }
     },
     methods:{
@@ -23,4 +24,6 @@ export default {
 
 
 <style lang="scss" scoped>
+ @use "../../styles/partials/variables.scss" as *;
+ 
 </style>

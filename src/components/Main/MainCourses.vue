@@ -2,7 +2,7 @@
 import { store } from "../store.js";
 
 export default {
-    name: 'Component1',
+    name: 'MainCourses',
     components: {
 
     },
@@ -24,4 +24,6 @@ export default {
 
 
 <style lang="scss" scoped>
+ @use "../../styles/partials/variables.scss" as *;
+ 
 </style>
