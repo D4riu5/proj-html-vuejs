@@ -78,5 +78,42 @@ export const store = reactive({
             image: '/h5-custom-icon-6.png',
             text: 'DIY&Craft',
         },
-    ]
+    ],
+    testimonialSlides: [
+        {
+            name: 'Joan Collins',
+            image: 'testimonials-standard-1.png',
+            text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium ea, ad vitae ab enim voluptatum illo dignissimos eveniet in dolorem voluptatibus voluptate neque pariatur fuga?',
+            occupation: 'STUDENT',
+            bg: '/h5-parallax-img-1.png'
+        },
+        {
+            name: 'Neymar Jr.',
+            image: 'testimonials-standard-2.png',
+            text: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic, laboriosam ex optio laborum ab nisi.',
+            occupation: 'FOOTBALL PLAYER',
+            bg: '/h5-parallax-img-2.png'
+        },
+        {
+            name: 'Harry Potter',
+            image: 'testimonials-standard-3.png',
+            text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta quaerat doloribus pariatur obcaecati amet beatae iste illum omnis dolores velit distinctio repudiandae, mollitia ex quisquam quasi iure. Non sit voluptate exercitationem cumque quod perspiciatis! Nobis autem quaerat enim odit quo.',
+            occupation: 'AUROR',
+            bg: '/h5-parallax-img-3.png'
+        },
+        {
+            name: 'Squall Leonhart',
+            image: 'testimonials-standard-4.png',
+            text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, dolores mollitia accusantium ea vel consequatur vitae molestiae quo provident eligendi illo eos. Ipsa vitae quo doloribus sunt repellat expedita autem.',
+            occupation: 'S.E.E.D',
+            bg: '/h5-parallax-img-4.png'
+        },
+        {
+            name: 'Geralt of Rivia',
+            image: 'testimonials-standard-5.png',
+            text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
+            occupation: 'WITCHER',
+            bg: '/h5-parallax-img-5.png'
+        },
+    ],
 });
