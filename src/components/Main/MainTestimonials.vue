@@ -37,12 +37,13 @@ export default {
 
 
 <template>
-    <div :style="{ 'background-image': `url(src/assets/img/bg/${currentTestimonialSlide.bg})`,'background-size': 'cover' }" class="my_testimonials-container position-relative">
+    <!-- COLORED BGS FOR EACH CARD: 'background-image': `url(src/assets/img/bg/${currentTestimonialSlide.bg})` -->
+    <div :style="{ 'background-image': `url(src/assets/img/bg/h5-parallax-img-1.png)`,'background-size': 'cover' }" class="my_testimonials-container position-relative">
         <div class="text-white d-flex justify-content-center align-items-center">
             <div class="text-center w-75 mt-xl-5">
                 
                 <img class="mt-5 mb-3" :src="`src/assets/img/profile/${currentTestimonialSlide.image}`" :alt="currentTestimonialSlide.name">
-                <p>
+                <p class="mx-xl-5">
                     {{ currentTestimonialSlide.text }}
                 </p>
                 <div class="fw-bold fs-5 py-2">

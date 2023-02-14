@@ -20,7 +20,7 @@ export default {
 
 
 <template>
-    <div class="container text-white py-5 d-flex justify-content-between position-absolute start-0 end-0 z-2">
+    <div class="container text-white py-4 d-flex justify-content-between position-absolute start-0 end-0 z-2">
         <div class="py-2">
             <AppLogo/>
         </div>
@@ -50,7 +50,7 @@ export default {
         color: $white;
 
         &:hover{
-            color: $dirtyWhite;
+            color: $lighterBlue;
         }
         .item-counter{
             width: 15px;

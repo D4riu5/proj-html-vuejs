@@ -116,4 +116,42 @@ export const store = reactive({
             bg: '/h5-parallax-img-5.png'
         },
     ],
+    infos: [
+        {
+            title: 'What We Do',
+            header: 'Learning Possibilities',
+            description: 'Lorem ipsum gravida nibh vel velit auctor aliquetn sollicitudirem quibibendum auci elit cons equat ipsutis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt ',
+            image: '/h12-tabs-icon-1.png',
+        },
+        {
+            title: 'Degree Programme',
+            header: 'Inspiring Minds',
+            description: 'Lorem ipsum gravida nibh vel velit auctor aliquetn sollicitudirem quibibendum auci elit cons equat ipsutis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt ',
+            image: '/h12-tabs-icon-2.png',
+        },
+        {
+            title: 'Career Achievements',
+            header: 'Investing in Knowledge',
+            description: 'Lorem ipsum gravida nibh vel velit auctor aliquetn sollicitudirem quibibendum auci elit cons equat ipsutis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt ',
+            image: '/h12-tabs-icon-3.png',
+        },
+        {
+            title: 'Personal Managment',
+            header: 'Secure Your Future',
+            description: 'Lorem ipsum gravida nibh vel velit auctor aliquetn sollicitudirem quibibendum auci elit cons equat ipsutis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt ',
+            image: '/h12-tabs-icon-4.png',
+        },
+        {
+            title: 'Steps To Success',
+            header: 'Where Learning Begins',
+            description: 'Lorem ipsum gravida nibh vel velit auctor aliquetn sollicitudirem quibibendum auci elit cons equat ipsutis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt ',
+            image: '/h12-tabs-icon-5.png',
+        },
+        {
+            title: 'Knowledge Transfer',
+            header: 'Knowledge is Power',
+            description: 'Lorem ipsum gravida nibh vel velit auctor aliquetn sollicitudirem quibibendum auci elit cons equat ipsutis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt ',
+            image: '/h12-tabs-icon-6.png',
+        },
+    ]
 });

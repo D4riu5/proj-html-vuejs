@@ -66,7 +66,7 @@ export default {
     </div>
     <div class="container p-5">    
 
-        <div class="d-flex pt-5">
+        <div class="d-flex py-5">
 
             <div class="w-50">
                 <img class="my_img-2 pt-5" src="../../assets/img/misc/h5-img-2.jpg" alt="tutoring img 2">
