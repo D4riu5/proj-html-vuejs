@@ -19,7 +19,7 @@ export default {
 
 
 <template>
-    <div class="container p-4 my-3 d-flex justify-content-between">
+    <div class="container p-5 my-3 d-flex justify-content-between">
         <div v-for="category in store.categories" class="p-xl-5 p-4 my_category-container">
             <div class="position-relative">
                 <img class="mb-2" :src="`src/assets/img/misc${category.image}`" :alt="category.text">

@@ -59,8 +59,8 @@ export default {
             justify-content: center;
             align-items: center;
             font-size: 10px;
-            top: 5px;
-            right: -2px;
+            top: 7px;
+            right: -1px;
         }
 
         .fa-magnifying-glass{
@@ -68,6 +68,3 @@ export default {
         }
     }
 </style>
-
-
-#f2f8fc
