@@ -39,11 +39,11 @@ export default {
 
                 <swiper-container rewind="true" slides-per-view="3" slides-per-group="3" :pagination="{ clickable: true }" :autoplay="{delay: 6000,disableOnInteraction: false, pauseOnMouseEnter: true,}">
                     <swiper-slide v-for="(course, index) in store.courses">
-                        <div class="d-flex flex-column border m-4 mb-5">
+                        <div class="d-flex flex-column border m-4 mb-5 more-margin">
                             <div>
                                 <img :src="`src/assets/img/misc${course.image}`" :alt="course.title">
                             </div>
-                            <div class="p-4">
+                            <div class="p-xl-4">
                                 <div class="position-relative">
                                     <h5>
                                         {{ course.title }}
@@ -113,7 +113,9 @@ export default {
         color: $darkgray;
     }
 
-
+    .more-margin{
+        margin-bottom: 20%!important;
+    }
 
     // imgs
     img{

@@ -19,29 +19,9 @@ export default {
 
 
 <template>
-    <div class="container p-5 my-3 d-flex justify-content-between">
-        <div class="bg-secondary p-5">
-            <div>
-                IMAGE
-            </div>
-        </div>
-
-        <div class="bg-secondary p-5">
-            <div>
-                IMAGE
-            </div>
-        </div>
-
-        <div class="bg-secondary p-5">
-            <div>
-                IMAGE
-            </div>
-        </div>
-
-        <div class="bg-secondary p-5">
-            <div>
-                IMAGE
-            </div>
+    <div class="container py-5 my-3 d-flex justify-content-between">
+        <div v-for="sponsor in store.sponsors" class="m-4">
+            <img :src="`src/assets/img/misc${sponsor.image}`" :alt="sponsor.title">
         </div>
     </div>
 </template>
@@ -49,5 +29,14 @@ export default {
 
 <style lang="scss" scoped>
     @use "../../styles/partials/variables.scss" as *;
- 
+
+    img{
+        width: 100%;
+        transition: 0.3s;
+        cursor: pointer;
+
+        &:hover{
+            opacity: 0.5;
+        }
+    }
 </style>

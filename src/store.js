@@ -236,5 +236,24 @@ export const store = reactive({
             tag: 'BUSINESS',
             image: '/course-9-f-img.jpg',
         },
-    ]
+    ],
+    sponsors: [
+        {
+            image: '/h5-client-1.png',
+            title: 'iAcademy'
+        },
+        {
+            image: '/h5-client-2.png',
+            title: 'Study Central'
+        },
+        {
+            image: '/h5-client-3.png',
+            title: 'Educator'
+        },
+        {
+            image: '/h5-client-4.png',
+            title: 'Scholar University'
+        },
+    ],
+    
 });

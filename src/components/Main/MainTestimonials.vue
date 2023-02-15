@@ -41,7 +41,7 @@ export default {
     <div :style="{ backgroundImage: colors ? `url(src/assets/img/bg/${currentTestimonialSlide.bg})` : `url(src/assets/img/bg/h5-parallax-img-1.png)` }"
     class="my_testimonials-container position-relative">
         <div class="text-white d-flex justify-content-center align-items-center">
-            <div class="text-center w-75 mt-xl-5">
+            <div class="text-center w-50 mt-xl-5">
                 
                 <img class="mt-5 mb-3" :src="`src/assets/img/profile/${currentTestimonialSlide.image}`" :alt="currentTestimonialSlide.name">
                 <p class="mx-xl-5">
@@ -77,7 +77,7 @@ export default {
     @use "../../styles/partials/variables.scss" as *;
  
     .my_testimonials-container{
-        height: 75vh;
+        height: 550px;
         background-size: cover;
     }
 

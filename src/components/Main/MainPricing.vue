@@ -45,7 +45,7 @@ export default {
     @use "../../styles/partials/variables.scss" as *;
 
     .my_pricing-container{
-        height: 100vh;
+        // height: 100vh;
     }
  
 </style>
