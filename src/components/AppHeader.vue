@@ -64,8 +64,12 @@ export default {
             right: -1px;
         }
 
+        // icons
         .fa-magnifying-glass{
             transform: scaleX(-1);
         }
     }
 </style>
+
+
+

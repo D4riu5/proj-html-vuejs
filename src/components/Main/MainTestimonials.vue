@@ -11,6 +11,7 @@ export default {
         return {
             store,
             currentTestimonialIndex: 0,
+            colors: false,
         }
     },
     methods:{
@@ -37,8 +38,8 @@ export default {
 
 
 <template>
-    <!-- COLORED BGS FOR EACH CARD: 'background-image': `url(src/assets/img/bg/${currentTestimonialSlide.bg})` -->
-    <div :style="{ 'background-image': `url(src/assets/img/bg/h5-parallax-img-1.png)`,'background-size': 'cover' }" class="my_testimonials-container position-relative">
+    <div :style="{ backgroundImage: colors ? `url(src/assets/img/bg/${currentTestimonialSlide.bg})` : `url(src/assets/img/bg/h5-parallax-img-1.png)` }"
+    class="my_testimonials-container position-relative">
         <div class="text-white d-flex justify-content-center align-items-center">
             <div class="text-center w-75 mt-xl-5">
                 
@@ -62,7 +63,13 @@ export default {
             :style="{ color: currentTestimonialIndex === index ? 'white' : '' }">
             </i>
         </div>
+
+
+        <button @click="colors = !colors" class="btn btn-primary position-absolute bottom-0 end-0">
+            click me!
+        </button>
     </div>
+
 </template>
 
 
@@ -71,6 +78,7 @@ export default {
  
     .my_testimonials-container{
         height: 75vh;
+        background-size: cover;
     }
 
     img{

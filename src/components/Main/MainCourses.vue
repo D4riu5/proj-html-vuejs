@@ -14,54 +14,70 @@ export default {
     methods:{
         
     },
+    mounted() {
+        
+
+    }
 }
 </script>
 
 
 <template>
-    <div class="bg-secondary border-top border-bottom">
-        <div class="container my_courses-container p-5">
+    <div class="border-top border-bottom my_bg">
+        <div class="container p-5 my_courses-container position-relative">
 
             <div class="d-flex flex-column align-items-center my-5 text-center">
                 <h2>
                 Popular Online Courses
                 </h2>
-                <p class="w-50">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam aut, optio dolorem libero omnis sequi dolor accusamus numquam, enim adipisci ipsum error, quos rerum ducimus?
+                <p class="w-75">
+                    Lorem ipsum gravida nibh vel velit auctor aliquetnean sollicitudin, lorem quis bibendum auci elit consequat ipsutis sem nibh id elit.
                 </p>
             </div>
 
             <div class="d-flex justify-content-between">
 
-                <div>
-                    <div>
-                        card image
-                    </div>
-                    <div class="p-2">
-                        card text
-                    </div>
-                </div>
+                <swiper-container rewind="true" slides-per-view="3" slides-per-group="3" :pagination="{ clickable: true }" :autoplay="{delay: 6000,disableOnInteraction: false, pauseOnMouseEnter: true,}">
+                    <swiper-slide v-for="(course, index) in store.courses">
+                        <div class="d-flex flex-column border m-4 mb-5">
+                            <div>
+                                <img :src="`src/assets/img/misc${course.image}`" :alt="course.title">
+                            </div>
+                            <div class="p-4">
+                                <div class="position-relative">
+                                    <h5>
+                                        {{ course.title }}
+                                    </h5>
+                                    <div class="my_badge position-absolute top-0 end-0 px-3 rounded-pill"
+                                    :style="{ backgroundColor: course.price === 'FREE' ? '#ffd740!important' : '',
+                                     Color: course.price === 'FREE' ? 'black!important' : ''}">
+                                        {{ course.price }}
+                                    </div>
+                                </div>
 
-                <div>
-                    <div>
-                        card image
-                    </div>
-                    <div class="p-2">
-                        card text
-                    </div>
-                </div>
-
-                <div>
-                    <div>
-                        card image
-                    </div>
-                    <div class="p-2">
-                        card text
-                    </div>
-                </div>
+                                <div class="sub-text pb-2">
+                                    {{ course.teacher }}
+                                </div>
+                                <p>
+                                    {{ course.description }}
+                                </p>
+                                
+                                <div class="my_tags-container">
+                                    <span>
+                                        <i class="fa-solid fa-user pe-1 fs-6"></i>
+                                        {{ course.students }}
+                                    </span>
+                                    <span>
+                                        <i class="fa-solid fa-tag pe-2 ps-1 fs-6"></i>
+                                        {{ course.tag }}
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </swiper-slide>
+                </swiper-container>
 
             </div>
-
         </div>
     </div>
     
@@ -70,8 +86,48 @@ export default {
 
 <style lang="scss" scoped>
     @use "../../styles/partials/variables.scss" as *;
-    
-    .my_courses-container{
-        height: 100vh;
+
+    .my_bg{
+        background-image: url(../../assets/img/bg/background-pattern.jpg);
+        background-size: auto;
     }
+ 
+    .my_badge{
+        background-color: $lighterBlue;
+        font-size: 12px;
+        padding-bottom: 4px;
+        color: $white;
+    }
+
+    .my_tags-container, .sub-text{
+        color: $gray;
+        font-size: 15px;
+    }
+
+    h2{
+        font-size: 50px;
+    }
+
+    p{
+        font-size: 14px;
+        color: $darkgray;
+    }
+
+
+
+    // imgs
+    img{
+        width: 100%;
+        aspect-ratio: 2/1.4;
+        object-fit: cover;
+    }
+
+
+    // icons
+    .fa-tag{
+            transform: scaleX(-1);
+        }
+
+
+
 </style>

@@ -36,7 +36,7 @@ export default {
        <div class="row">
             <div class="col-4 d-flex flex-column">
                 <div v-for="(info, index) in store.infos" 
-                @click="currentInfoTabIndex = index; transitionEffect()"
+                @click="currentInfoTabIndex !== index ? (currentInfoTabIndex = index, transitionEffect()) : null "
                 :class="currentInfoTabIndex === index ? 'selected' : ''"
                 class="p-4 fw-bold my_tab">
                     {{ info.title }}
@@ -45,9 +45,9 @@ export default {
 
             <transition name="fade">
                 <div v-if="visible" class="col-8 px-5 d-flex flex-column justify-content-between position-relative">
-                    <h1 class="mb-4">
+                    <h2 class="mb-4">
                         {{ currentInfoTab.header }}
-                    </h1>
+                    </h2>
                     <p>
                         {{ currentInfoTab.description }}
                     </p>
@@ -102,6 +102,10 @@ export default {
         }
     }
     
+    // text
+    h2{
+        font-size: 40px;
+    }
 
     // List
     ul{
