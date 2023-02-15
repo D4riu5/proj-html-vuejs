@@ -24,7 +24,7 @@ export default {
                 setTimeout(() => {
                     this.show = true;
                 }, 100);
-            }, 8000);
+            }, 6000);
         },
     },
     computed: {
