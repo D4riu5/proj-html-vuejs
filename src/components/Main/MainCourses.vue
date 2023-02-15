@@ -43,7 +43,7 @@ export default {
                             <div>
                                 <img :src="`src/assets/img/misc${course.image}`" :alt="course.title">
                             </div>
-                            <div class="p-xl-4">
+                            <div class="p-xl-4 bg-white">
                                 <div class="position-relative">
                                     <h5>
                                         {{ course.title }}
@@ -116,7 +116,16 @@ export default {
 
     .more-margin{
         margin-bottom: 20%!important;
+        cursor: pointer;
+        transition: 0.5s;
+
+        &:hover{
+            transform: translateY(-10px);
+            -webkit-box-shadow: 0px 0px 20px -1px rgba(0,0,0,0.91); 
+            box-shadow: 0px 0px 20px -1px rgba(0,0,0,0.91);
+        }
     }
+
 
     // imgs
     img{

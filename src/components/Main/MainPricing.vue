@@ -223,6 +223,8 @@ export default {
         border: none;
         color: $black;
         background-color: $white;
+        transition: 0.3s;
+
         &:hover{
             color: $white;
             background-color: $lighterBlue;
@@ -233,6 +235,8 @@ export default {
         border: none;
         color: white;
         background-color: $lighterBlue;
+        transition: 0.3s;
+        
         &:hover{
             background-color: $lightBlue;
         }
