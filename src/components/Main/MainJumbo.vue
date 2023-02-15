@@ -12,6 +12,7 @@ export default {
             currentJumboIndex: 0,
             jumboInterval: null,
             show: true,
+            modalOpen: false,
         }
     },
     methods:{
@@ -52,7 +53,10 @@ export default {
                     <p>
                         {{ currentJumboSlide.paragraph }}
                     </p>
-                    <button :class="currentJumboSlide.button == 'REGISTER NOW' ? 'my_button-normal fw-bold py-3 px-5' : 'p-2 my_button-round'">
+                    <button :class="currentJumboSlide.button == 'REGISTER NOW' ? 'my_button-normal fw-bold py-3 px-5' : 'p-2 my_button-round'"
+                    :data-bs-toggle="currentJumboSlide.button == 'PLAY' ? 'modal' : ''" 
+                    data-bs-target="#videoModal" @click="currentJumboSlide.button == 'PLAY' ? modalOpen = true : ''"
+                    >
                         <template v-if="currentJumboSlide.button == 'PLAY'">
                             <i class="fa-solid fa-play"></i>
                         </template>
@@ -72,6 +76,27 @@ export default {
         class="p-1 mx-1">
         </i>
     </div>
+
+
+    <!-- Modal -->
+    <div @keydown.esc="modalOpen = false" class="modal fade" id="videoModal" data-bs-backdrop="static" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content bg-dark text-white">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Yutube Video</h1>
+                </div>
+            <div class="modal-body d-flex justify-content-center align-items-center">
+                <iframe v-if="modalOpen" width="60%" height="100%"
+                    src="https://www.youtube.com/embed/xfajlaQj_rY" >
+                </iframe> 
+            </div>
+                <div class="modal-footer d-flex justify-content-center">
+                    <button @click="modalOpen = false" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </template>
 
 
