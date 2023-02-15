@@ -23,31 +23,65 @@ export default {
     },
     data() {
         return {
-            store
+            store,
+            show: true,
         }
     },
     methods:{
         
     },
+    mounted() {
+        const observer = new IntersectionObserver((entries) => {
+            if (entries[0].isIntersecting) {
+                this.show = false;
+            } else {
+                this.show = true;
+            }
+        });
+        observer.observe(this.$refs.myMainJumbo);
+    }
 }
 </script>
 
 
 <template>
+    
+    <MainJumbo/>
+    <div  ref="myMainJumbo"></div>
+    <MainCategories/>
+    <MainTutoring/>
+    <MainTestimonials/>
+    <MainInfo/>
+    <MainCourses/>
+    <MainPricing/>
+    <MainSponsors/>
 
-<MainJumbo/>
-<MainCategories/>
-<MainTutoring/>
-<MainTestimonials/>
-<MainInfo/>
-<MainCourses/>
-<MainPricing/>
-<MainSponsors/>
+    <a v-if="show" href="#" class="my-div d-flex flex-column align-items-center justify-content-center">
+        <i class="fa-solid fa-chevron-up"></i>
+        <span>
+            TOP
+        </span>
+    </a>
 
 </template>
 
 
 <style lang="scss" scoped>
     @use "../styles/partials/variables.scss" as *;
+
+    .my-div{
+        position: fixed;
+        bottom: 80px;
+        right: 0;
+        width: 65px;
+        aspect-ratio: 1/1;
+        background-color: $lighterBlue;
+        color: $white;
+        text-decoration: none;
+        
+        &:hover > span{
+            display: none;
+        }
+    }
 
 </style>

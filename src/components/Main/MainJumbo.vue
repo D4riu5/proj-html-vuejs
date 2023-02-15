@@ -10,14 +10,20 @@ export default {
         return {
             store,
             currentJumboIndex: 0,
+            jumboInterval: null,
+            show: true,
         }
     },
     methods:{
         startJumboInterval() {
             clearInterval(this.jumboInterval);
             this.jumboInterval = setInterval(() => {
-            this.currentJumboIndex = (this.currentJumboIndex + 1) % this.store.jumboSlides.length;
-        }, 6000);
+                this.show = false;
+                this.currentJumboIndex = (this.currentJumboIndex + 1) % this.store.jumboSlides.length;
+                setTimeout(() => {
+                    this.show = true;
+                }, 100);
+        }, 8000);
   },
     },
     computed: {
@@ -37,24 +43,26 @@ export default {
 
 <template>
     <div :style="{ 'background-image': `url(src/assets/img/bg/${currentJumboSlide.bg})`,'background-size': 'cover'}">
-        <div class="my_jumbo-container text-white d-flex justify-content-center align-items-center">
-            <div class="text-center w-50 mt-5">
-                <h1>
-                    {{ currentJumboSlide.title }}
-                </h1>
-                <p>
-                    {{ currentJumboSlide.paragraph }}
-                </p>
-                <button :class="currentJumboSlide.button == 'REGISTER NOW' ? 'my_button-normal fw-bold py-3 px-5' : 'p-2 my_button-round'">
-                    <template v-if="currentJumboSlide.button == 'PLAY'">
-                        <i class="fa-solid fa-play"></i>
-                    </template>
-                    <template v-if="currentJumboSlide.button == 'REGISTER NOW'">
-                        {{currentJumboSlide.button}}
-                    </template>
-                </button>
+        <transition name="fade">
+            <div v-if="show" class="my_jumbo-container text-white d-flex justify-content-center align-items-center">
+                <div class="text-center w-50 mt-5">
+                    <h1>
+                        {{ currentJumboSlide.title }}
+                    </h1>
+                    <p>
+                        {{ currentJumboSlide.paragraph }}
+                    </p>
+                    <button :class="currentJumboSlide.button == 'REGISTER NOW' ? 'my_button-normal fw-bold py-3 px-5' : 'p-2 my_button-round'">
+                        <template v-if="currentJumboSlide.button == 'PLAY'">
+                            <i class="fa-solid fa-play"></i>
+                        </template>
+                        <template v-if="currentJumboSlide.button == 'REGISTER NOW'">
+                            {{currentJumboSlide.button}}
+                        </template>
+                    </button>
+                </div>
             </div>
-        </div>
+        </transition>
     </div>
 
     <div class="position-absolute top-75 start-50 translate-middle pb-5">
@@ -72,7 +80,6 @@ export default {
 
     .my_jumbo-container{
         height: 80vh;
-        background-size: contain;
     }
     
     // TEXT
@@ -96,6 +103,7 @@ export default {
         aspect-ratio: 1/1;
         border-radius: 50%;
         background-color: $white;
+        
         &:hover{
             background-color: $dirtyWhite;
         }
@@ -114,5 +122,23 @@ export default {
         &:hover{
             color: $white;
         }
+    }
+
+
+
+    
+    // transitions
+    .fade-enter-from, .fade-leave-to{
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    .fade-enter-to, .fade-leave-from{
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .fade-enter-active, .fade-leave-active{
+        transition: all 0.5s;
     }
 </style>

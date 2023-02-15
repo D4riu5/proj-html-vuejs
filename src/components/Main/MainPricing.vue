@@ -224,10 +224,14 @@ export default {
         color: $black;
         background-color: $white;
         transition: 0.3s;
+        -webkit-box-shadow: 0px 0px 0px 3px rgba(206,206,206,0.91); 
+        box-shadow: 0px 0px 0px 3px rgba(206,206,206,0.91);
 
         &:hover{
             color: $white;
             background-color: $lighterBlue;
+            -webkit-box-shadow: none; 
+            box-shadow: none;
         }
     }
 

@@ -79,6 +79,7 @@ export default {
     .my_testimonials-container{
         height: 550px;
         background-size: cover;
+        background-attachment: fixed;
     }
 
     img{

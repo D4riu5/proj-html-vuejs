@@ -18,7 +18,7 @@ export default {
             this.visible = false;
             setTimeout(() => {
                 this.visible = true;
-            }, 400);
+            }, 1);
         }
         
     },
@@ -131,10 +131,20 @@ export default {
         left: 550px;
     }
 
-    .fade-enter-active, .fade-leave-active {
-        transition: opacity 0.4s;
-    }
-    .fade-enter, .fade-leave-to {
+    // transitions
+
+    .fade-enter-from, .fade-leave-to{
         opacity: 0;
+        transform: translateY(-20px);
     }
+
+    .fade-enter-to, .fade-leave-from{
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .fade-enter-active, .fade-leave-active{
+        transition: all 0.5s;
+    }
+
 </style>
