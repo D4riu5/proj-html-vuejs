@@ -84,7 +84,6 @@ export default {
         }
     }
 
-
     .alternative{
         color: $black!important;
 
