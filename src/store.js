@@ -255,5 +255,6 @@ export const store = reactive({
             title: 'Scholar University'
         },
     ],
-    
+    support: ['User dashboard', 'Contact Us', 'FAQ', 'Course Offer', 'Events'],
+    socials: ['fa-twitter','fa-instagram','fa-facebook-f']
 });

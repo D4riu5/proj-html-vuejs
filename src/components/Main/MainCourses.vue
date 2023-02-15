@@ -48,7 +48,7 @@ export default {
                                     <h5>
                                         {{ course.title }}
                                     </h5>
-                                    <div class="my_badge position-absolute top-0 end-0 px-3 rounded-pill"
+                                    <div class="my_badge position-absolute top-0 px-3 rounded-pill"
                                     :style="{ backgroundColor: course.price === 'FREE' ? '#ffd740!important' : '',
                                      Color: course.price === 'FREE' ? 'black!important' : ''}">
                                         {{ course.price }}
@@ -97,6 +97,7 @@ export default {
         font-size: 12px;
         padding-bottom: 4px;
         color: $white;
+        right: -10px;
     }
 
     .my_tags-container, .sub-text{
