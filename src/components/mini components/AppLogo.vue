@@ -1,5 +1,5 @@
 <script>
-
+import {store} from "../../store.js"
 export default {
     name: 'AppLogo',
     components: {
@@ -7,7 +7,7 @@ export default {
     },
     data() {
         return {
-            
+            store,
         }
     },
     methods:{
@@ -18,8 +18,8 @@ export default {
 
 
 <template>
-    <a href="#nogo">
-        <img src="../../assets/img/logo/logo-light.png" alt="Logo">
+    <a @click="this.store.homePage = true" href="#nogo">
+        <img :src="store.homePage ? 'src/assets/img/logo/logo-light.png' : 'src/assets/img/logo/logo-default.png'" alt="Logo">
     </a>
 </template>
 

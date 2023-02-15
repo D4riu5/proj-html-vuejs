@@ -1,6 +1,7 @@
 <script>
 import AppHeader from './components/AppHeader.vue';
 import AppMain from './components/AppMain.vue';
+import AppMainTwo from './components/AppMainTwo.vue';
 import AppFooter from './components/AppFooter.vue';
 import { store } from "./store.js";
 
@@ -9,6 +10,7 @@ export default {
     components: {
       AppHeader,
       AppMain,
+      AppMainTwo,
       AppFooter,
     },
     data() {
@@ -26,7 +28,12 @@ export default {
 <template>
 
   <AppHeader/>
-  <AppMain/>
+  <div v-if="store.homePage == true">
+    <AppMain/>
+  </div>
+  <div v-else>
+    <AppMainTwo/>
+  </div>
   <AppFooter/>
 
 </template>

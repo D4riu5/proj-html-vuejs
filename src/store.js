@@ -256,5 +256,12 @@ export const store = reactive({
         },
     ],
     support: ['User dashboard', 'Contact Us', 'FAQ', 'Course Offer', 'Events'],
-    socials: ['fa-twitter','fa-instagram','fa-facebook-f']
+    socials: ['fa-twitter', 'fa-instagram', 'fa-facebook-f'],
+    homePage: true,
+    languagesSelected: false,
+    softwareSelected: false,
+    businessSelected: false,
+    chemistrySelected: false,
+    scienceSelected: false,
+    craftsSelected: false,
 });

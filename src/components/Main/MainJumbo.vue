@@ -81,7 +81,7 @@ export default {
     <!-- Modal -->
     <div @keydown.esc="modalOpen = false" class="modal fade" id="videoModal" data-bs-backdrop="static" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog modal-fullscreen">
-            <div class="modal-content bg-dark text-white">
+            <div class="modal-content">
                 <div class="modal-header">
                     <h1 class="modal-title fs-5" id="staticBackdropLabel">Yutube Video</h1>
                 </div>
