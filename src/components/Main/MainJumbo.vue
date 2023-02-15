@@ -24,8 +24,8 @@ export default {
                 setTimeout(() => {
                     this.show = true;
                 }, 100);
-        }, 8000);
-  },
+            }, 8000);
+        },
     },
     computed: {
         currentJumboSlide() {
@@ -87,7 +87,7 @@ export default {
                 </div>
             <div class="modal-body d-flex justify-content-center align-items-center">
                 <iframe v-if="modalOpen" width="60%" height="100%"
-                    src="https://www.youtube.com/embed/xfajlaQj_rY" >
+                    src="https://www.youtube.com/embed/8DB3V-pW75E" >
                 </iframe> 
             </div>
                 <div class="modal-footer d-flex justify-content-center">

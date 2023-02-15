@@ -146,17 +146,17 @@ export default {
                     <tr>
                         <td></td>
                         <td  class="p-4 cell-bg">
-                            <button class="my_button-white fw-bold py-3 px-5">
+                            <button @click="store.headerIcons[1].items++" class="my_button-white fw-bold py-3 px-5">
                                 GET IT NOW
                             </button>
                         </td>
                         <td class="p-4 cell-bg">
-                            <button class="my_button-blue fw-bold py-3 px-5">
+                            <button @click="store.headerIcons[1].items++" class="my_button-blue fw-bold py-3 px-5">
                                 GET IT NOW
                             </button>
                         </td>
                         <td class="p-4 cell-bg">
-                            <button class="my_button-white fw-bold py-3 px-5">
+                            <button @click="store.headerIcons[1].items++" class="my_button-white fw-bold py-3 px-5">
                                 GET IT NOW
                             </button>
                         </td>

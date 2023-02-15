@@ -53,7 +53,7 @@ export default {
             color: $lighterBlue;
         }
         .item-counter{
-            width: 15px;
+            width: 17px;
             aspect-ratio: 1/1;
             border-radius: 50%;
             background-color: $lightBlue;
