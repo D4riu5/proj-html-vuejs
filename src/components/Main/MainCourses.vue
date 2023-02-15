@@ -24,7 +24,7 @@ export default {
 
 <template>
     <div class="border-top border-bottom my_bg">
-        <div class="container p-5 my_courses-container position-relative">
+        <div class="container py-5 my_courses-container position-relative">
 
             <div class="d-flex flex-column align-items-center my-5 text-center">
                 <h2>
@@ -37,7 +37,7 @@ export default {
 
             <div class="d-flex justify-content-between">
 
-                <swiper-container rewind="true" slides-per-view="3" slides-per-group="3" :pagination="{ clickable: true }" :autoplay="{delay: 6000,disableOnInteraction: false, pauseOnMouseEnter: true,}">
+                <swiper-container speed="2000" rewind="true" slides-per-view="3" slides-per-group="3" :pagination="{ clickable: true }" :autoplay="{delay: 6000,disableOnInteraction: false, pauseOnMouseEnter: true,}">
                     <swiper-slide v-for="(course, index) in store.courses">
                         <div class="d-flex flex-column border m-4 mb-5 more-margin">
                             <div>

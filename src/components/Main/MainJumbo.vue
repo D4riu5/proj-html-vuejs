@@ -36,7 +36,7 @@ export default {
 
 
 <template>
-    <div :style="{ 'background-image': `url(src/assets/img/bg/${currentJumboSlide.bg})`,'background-size': 'cover'}" class="">
+    <div :style="{ 'background-image': `url(src/assets/img/bg/${currentJumboSlide.bg})`,'background-size': 'cover'}">
         <div class="my_jumbo-container text-white d-flex justify-content-center align-items-center">
             <div class="text-center w-50 mt-5">
                 <h1>
